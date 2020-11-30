@@ -11,6 +11,7 @@ var assert = require('assert');
 var highscores = require('./routes/highscores');
 var user = require('./routes/user');
 var loc = require('./routes/location');
+//var health = require('./routes/health');
 
 // App
 var app = express();
