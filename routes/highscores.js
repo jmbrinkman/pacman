@@ -6,6 +6,27 @@ var Database = require('../lib/database');
 // create application/x-www-form-urlencoded parser
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
+function sleep(milliseconds) { 
+    let timeStart = new Date().getTime(); 
+    while (true) { 
+        let elapsedTime = new Date().getTime() - timeStart; 
+        if (elapsedTime > milliseconds) { 
+            break; 
+        } 
+    } 
+} 
+
+console.log("Hello World"); 
+console.log("Sleeping for 10000 milliseconds"); 
+
+// sleep for 5000 miliiseconds 
+sleep(10000); 
+
+console.log("Sleep completed successfully");
+
+
+
+
 // middleware that is specific to this router
 router.use(function timeLog (req, res, next) {
     console.log('Time: ', Date());
